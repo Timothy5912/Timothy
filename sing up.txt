@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitlangpui Pictures - Signup</title>
+    <style>
+        body {
+            background-image: url('back.jpg');
+            background-size: contain; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-color: #1c1c1c; 
+            background-blend-mode: overlay; 
+            color: #ffffff; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; 
+        }
+
+        .container {
+            text-align: center;
+            width: 90%; 
+            max-width: 500px;
+        }
+
+        .title {
+            font-size: 41px; 
+            margin-top: 0;
+            color: #ffcc00; 
+            font-family: 'Cinzel', serif;
+        }
+
+        .signup-holder {
+            background-color: rgba(255, 255, 255, 0.1); 
+            padding: 30px; 
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+
+        .signup-holder input {
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0;
+            font-size: 16px; 
+            border-radius: 5px;
+            border: none;
+        }
+
+        .signup-holder button {
+            width: 100%; 
+            padding: 10px; 
+            font-size: 16px;
+            background-color: #ffcc00; 
+            color: #000; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signup-holder button:hover {
+            background-color: #ffaa00;
+        }
+
+        .user-auth {
+            position: absolute;
+            top: 20px;
+            left: 20px; 
+            font-size: 16px;
+        }
+
+        .user-auth a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .user-auth a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Leitlangpui Pictures - Signup</h1>
+
+        <div class="signup-holder">
+            <form action="signup.php" method="POST">
+                <input type="text" name="username" id="username" placeholder="I hming" required>
+                <input type="phone" name="phone" id="phone" placeholder="I phone number" required>
+                <input type="password" name="password" id="password" placeholder="I password tur" required>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="I password tur comfirm na" required>
+                <button type="submit" name="signup">Signup</button>
+            </form>
+        </div>
+
+        <div class="user-auth">
+            <a href="login.php">Login</a> | <a href="forgotpassword.php">Forgot Password?</a>
+        </div>
+    </div>
+
+</body>
+</html>
