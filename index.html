@@ -6,7 +6,7 @@
     <title>Leitlangpui Pictures</title>
     <style>
         body {
-            background-image: url('back.jpg');
+            background-image: url('image/back.jpg');
             background-size: contain; 
             background-position: center;
             background-repeat: no-repeat; 
@@ -58,6 +58,16 @@
             font-size: 16px;
         }
 
+        .user-auth a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .user-auth a:hover {
+            text-decoration: underline;
+        }
+
         .movie-grid {
             display: flex;
             flex-direction: column;
@@ -74,17 +84,7 @@
             font-size: 20px; 
             color: #ffcc00; 
             margin-bottom: 10px; 
-            cursor: pointer; /* Make the category clickable */
-        }
-
-        .category a {
-            color: #ffcc00;
-            text-decoration: none;
-            display: block;
-        }
-
-        .category a:hover {
-            text-decoration: underline;
+            cursor: pointer;
         }
 
         .movies-row {
@@ -138,43 +138,46 @@
         </div>
 
         <div class="movie-grid">
+            <!-- Action Category -->
             <div class="category">
-                <h2 onclick="location.href='action.html'">Action</h2> 
+                <h2 onclick="location.href='action.html'">Action</h2>
                 <div class="movies-row">
                     <div class="movie-item" onclick="location.href='ambush.html?movie=ambush'"> 
-                        <img src="D:/website/image/action/1.jpg" alt="Movie 1">
+                        <img src="image/action/1.jpg" alt="Ambush">
                         Ambush
                     </div>
                     <div class="movie-item" onclick="location.href='movie.php?movie=call112'"> 
-                        <img src="D:/website/image/action/2.jpeg" alt="Movie 2">
+                        <img src="image/action/2.jpeg" alt="Call 112">
                         Call 112
                     </div>
                 </div>
             </div>
 
+            <!-- Drama Category -->
             <div class="category">
-                <h2 onclick="location.href='drama.html'">Drama</h2> 
+                <h2 onclick="location.href='drama.html'">Drama</h2>
                 <div class="movies-row">
                     <div class="movie-item" onclick="location.href='movie.php?movie=thingtlang'"> 
-                        <img src="D:/website/image/drama/1.jpeg" alt="Movie 7">
+                        <img src="image/drama/1.jpeg" alt="Thingtlang Tlangval">
                         Thingtlang Tlangval
                     </div>
                     <div class="movie-item" onclick="location.href='movie.php?movie=hremhmun'"> 
-                        <img src="D:/website/image/drama/2.jpeg" alt="Movie 8">
+                        <img src="image/drama/2.jpeg" alt="Hremhmun Shortcut">
                         Hremhmun Shortcut
                     </div>
                 </div>
             </div>
 
+            <!-- Comedy Category -->
             <div class="category">
-                <h2 onclick="location.href='comedy.html'">Comedy</h2> <!-- Redirect to category page -->
+                <h2 onclick="location.href='comedy.html'">Comedy</h2>
                 <div class="movies-row">
-                    <div class="movie-item" onclick="location.href='movie.php?movie=movie13'"> <!-- Redirect to movie page -->
-                        <img src="movie13.jpg" alt="Movie 13">
+                    <div class="movie-item" onclick="location.href='movie.php?movie=movie13'"> 
+                        <img src="image/comedy/movie13.jpg" alt="Movie 13">
                         Movie 13
                     </div>
-                    <div class="movie-item" onclick="location.href='movie.php?movie=movie14'"> <!-- Redirect to movie page -->
-                        <img src="movie14.jpg" alt="Movie 14">
+                    <div class="movie-item" onclick="location.href='movie.php?movie=movie14'"> 
+                        <img src="image/comedy/movie14.jpg" alt="Movie 14">
                         Movie 14
                     </div>
                 </div>
@@ -184,7 +187,7 @@
 
     <script>
         function searchMovies() {
-            const query = document.getElementById('search').value;
+            const query = document.getElementById('search').value.trim();
             if (query) {
                 alert("Searching for: " + query);
             } else {
